@@ -1,4 +1,3 @@
-const background = document.querySelector(".site-background");
 const revealItems = document.querySelectorAll(".reveal");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -22,14 +21,3 @@ if (reduceMotion) {
     observer.observe(item);
   });
 }
-
-function updateBackground() {
-  if (!background || reduceMotion) return;
-  background.style.transform = `translate3d(0, ${window.scrollY * -0.025}px, 0)`;
-}
-
-window.addEventListener("scroll", () => {
-  updateBackground();
-}, { passive: true });
-
-updateBackground();

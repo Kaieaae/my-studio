@@ -39,45 +39,6 @@ a {
   text-decoration: none;
 }
 
-.site-background {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.line {
-  position: absolute;
-  display: block;
-  background: rgba(51, 65, 85, 0.08);
-  transform-origin: center;
-}
-
-.line-a {
-  width: 1px;
-  height: 68vh;
-  top: 6vh;
-  left: 12vw;
-  transform: rotate(18deg);
-}
-
-.line-b {
-  width: 34vw;
-  height: 1px;
-  top: 30vh;
-  right: 5vw;
-  transform: rotate(-8deg);
-}
-
-.line-c {
-  width: 1px;
-  height: 44vh;
-  right: 10vw;
-  bottom: 4vh;
-  transform: rotate(-24deg);
-}
-
 .site-header {
   z-index: 20;
   display: flex;
