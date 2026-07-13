@@ -79,8 +79,6 @@ a {
 }
 
 .site-header {
-  position: fixed;
-  inset: 0 0 auto;
   z-index: 20;
   display: flex;
   align-items: center;
@@ -89,18 +87,6 @@ a {
   height: 76px;
   margin: 0 auto;
   color: var(--ink);
-  transition: width 280ms var(--ease), background 280ms var(--ease), border 280ms var(--ease), box-shadow 280ms var(--ease);
-}
-
-.site-header.is-scrolled {
-  top: 12px;
-  width: min(100% - 32px, var(--max));
-  height: 64px;
-  padding: 0 18px;
-  border: 1px solid rgba(31, 35, 40, 0.1);
-  background: var(--header);
-  backdrop-filter: blur(18px);
-  box-shadow: 0 18px 48px rgba(31, 35, 40, 0.08);
 }
 
 .brand {
@@ -511,10 +497,6 @@ a {
     min-height: 68px;
   }
 
-  .site-header.is-scrolled {
-    width: min(100% - 24px, var(--max));
-  }
-
   .nav {
     gap: 12px;
     font-size: 0.78rem;
@@ -598,8 +580,7 @@ a {
 }
 
 @media (max-width: 520px) {
-  .site-header,
-  .site-header.is-scrolled {
+  .site-header {
     justify-content: center;
   }
 

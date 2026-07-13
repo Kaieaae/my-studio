@@ -1,12 +1,6 @@
-const header = document.querySelector("[data-header]");
 const background = document.querySelector(".site-background");
 const revealItems = document.querySelectorAll(".reveal");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-function updateHeader() {
-  if (!header) return;
-  header.classList.toggle("is-scrolled", window.scrollY > 24);
-}
 
 if (reduceMotion) {
   revealItems.forEach((item) => item.classList.add("is-visible"));
@@ -35,9 +29,7 @@ function updateBackground() {
 }
 
 window.addEventListener("scroll", () => {
-  updateHeader();
   updateBackground();
 }, { passive: true });
 
-updateHeader();
 updateBackground();
