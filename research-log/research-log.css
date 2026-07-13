@@ -32,17 +32,6 @@
   padding: clamp(72px, 10vw, 132px) 0 clamp(56px, 8vw, 96px);
 }
 
-.log-title,
-.report-cover h1 {
-}
-
-.report-cover .page-hero-title {
-  max-width: 1240px;
-  font-size: clamp(2.55rem, 4.8vw, 4.7rem);
-  letter-spacing: -0.03em;
-  line-height: 1.08;
-}
-
 .log-subtitle {
   max-width: 720px;
   margin: 0;
@@ -105,9 +94,61 @@
   font-weight: 600;
 }
 
-.report-cover time {
+.report-kicker,
+.report-cover-title,
+.report-cover-subtitle,
+.report-meta p {
+  margin: 0;
+}
+
+.report-kicker {
+  color: var(--brass);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.report-cover-title {
+  color: var(--ink);
+  font-size: clamp(4.2rem, 9vw, 8.6rem);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.report-cover-subtitle {
+  max-width: 1180px;
+  color: var(--slate);
+  font-size: clamp(1.45rem, 3vw, 2.45rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.report-meta {
+  display: grid;
+  gap: 9px;
+  margin-top: clamp(18px, 4vw, 42px);
+}
+
+.report-meta p {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 18px;
+  align-items: baseline;
+  color: var(--ink);
+  font-family: "Noto Sans TC", "Inter", system-ui, sans-serif;
+  font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+  line-height: 1.7;
+}
+
+.report-meta span {
   color: var(--muted);
-  font-size: 1rem;
+}
+
+.report-meta time {
+  color: inherit;
 }
 
 .report-actions {
@@ -339,11 +380,19 @@ body.presentation-mode .presentation-controls {
     width: min(100% - 32px, 1250px);
   }
 
-  .report-cover .page-hero-title {
-    max-width: 100%;
-    font-size: clamp(2.4rem, 12vw, 3.8rem);
+  .report-cover-title {
+    font-size: clamp(3.2rem, 16vw, 5rem);
+  }
+
+  .report-cover-subtitle {
+    font-size: clamp(1.35rem, 7vw, 2rem);
     letter-spacing: 0;
-    line-height: 1.14;
+  }
+
+  .report-meta p {
+    grid-template-columns: 82px minmax(0, 1fr);
+    gap: 12px;
+    font-size: 1rem;
   }
 
   body.presentation-mode .presentation-controls {
