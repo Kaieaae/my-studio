@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Generic Slab Builder project detail by Sheng-Kai Lin Studio.">
+    <title>Generic Slab Builder - Sheng-Kai Lin Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+  </head>
+  <body>
+    <div class="site-background" aria-hidden="true">
+      <span class="line line-a"></span>
+      <span class="line line-b"></span>
+      <span class="line line-c"></span>
+    </div>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="../index.html#hero">Studio</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="../index.html#about">關於</a>
+        <a href="../index.html#projects">作品</a>
+        <a href="../index.html#contact">聯絡</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="project-hero detail-page">
+        <p class="eyebrow reveal">Project 01</p>
+        <h1 class="detail-title reveal">Generic Slab Builder</h1>
+        <p class="detail-subtitle reveal">Interactive Surface Slab Generator</p>
+        <p class="detail-lead reveal">
+          一個將表面模型建立流程整理成清楚步驟的研究工具，目標是讓計算材料研究者能更快從
+          bulk structure 轉換到可驗證、可重現、可投入 VASP 計算的 slab model。
+        </p>
+      </section>
+
+      <section class="detail-grid">
+        <article class="detail-block reveal">
+          <span>Project Overview</span>
+          <p>Generic Slab Builder 聚焦於表面科學常見的前處理工作：切面、真空層、超晶胞、固定底層與結構檢查。它把容易出錯的手動步驟轉成一致的互動流程。</p>
+        </article>
+        <article class="detail-block reveal">
+          <span>Problem</span>
+          <p>Slab 建模常需要在多個工具與格式之間來回切換。Miller Index、真空厚度與原子層固定若沒有清楚紀錄，後續計算很難重現。</p>
+        </article>
+        <article class="detail-block reveal">
+          <span>Solution</span>
+          <p>透過單一介面輸入結構與參數，系統輸出可用於 VASP 的模型，並在建立過程中提供基本 validation，降低研究前處理的摩擦。</p>
+        </article>
+        <article class="detail-block reveal">
+          <span>Workflow</span>
+          <p>匯入 bulk crystal structure，設定 Miller Index、Vacuum 與 Supercell，指定固定底層，檢查結構合理性，最後在 3D viewer 中確認輸出。</p>
+        </article>
+        <article class="detail-block reveal">
+          <span>Current Features</span>
+          <p>目前包含 slab generation、參數化設定、底層固定、輸出前驗證，以及可協助檢查模型方向與層狀結構的互動式檢視。</p>
+        </article>
+        <article class="detail-block reveal">
+          <span>Validation</span>
+          <p>工具會檢查真空層、層數與基本結構輸出，讓研究者在送入計算前先排除常見的幾何設定錯誤。</p>
+        </article>
+        <article class="detail-block reveal">
+          <span>Current Limitations</span>
+          <p>目前仍以明確參數控制為主，對特殊表面重構、缺陷與吸附物的支援會在後續版本中逐步擴充。</p>
+        </article>
+        <article class="detail-block reveal">
+          <span>Future Development</span>
+          <p>未來會加入更完整的結構模板、批次輸出、計算任務串接，以及更細緻的錯誤提示，使工具更貼近實際研究工作流。</p>
+        </article>
+      </section>
+
+      <nav class="detail-nav reveal" aria-label="Project navigation">
+        <a href="../index.html#projects">← Back to Projects</a>
+        <a href="ai-paper-reader.html">Next Project →</a>
+      </nav>
+    </main>
+
+    <footer class="footer">
+      <p>Sheng-Kai Lin Studio</p>
+      <p>Research, tools and reproducible workflows.</p>
+      <p>©2026</p>
+    </footer>
+
+    <script src="../app.js"></script>
+  </body>
+</html>

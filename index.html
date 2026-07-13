@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sheng-Kai Lin Studio is a research studio for computational materials, tools, and reproducible workflows.">
+    <title>Sheng-Kai Lin Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="site-background" aria-hidden="true">
+      <span class="line line-a"></span>
+      <span class="line line-b"></span>
+      <span class="line line-c"></span>
+    </div>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#hero" aria-label="Back to top">Studio</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#about">關於</a>
+        <a href="#projects">作品</a>
+        <a href="#contact">聯絡</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero-inner">
+          <p class="eyebrow reveal">SHENG-KAI LIN · RESEARCH STUDIO</p>
+          <h1 class="hero-title reveal">My Studio</h1>
+          <p class="hero-subtitle reveal">Research Studio for Computational Materials</p>
+          <p class="hero-copy reveal">
+            將材料模擬、人工智慧與程式設計，轉化為可重現的研究工具。
+          </p>
+          <a class="primary-link reveal" href="#projects">
+            探索作品
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+        <a class="scroll-cue" href="#about" aria-label="Scroll to About">↓</a>
+      </section>
+
+      <section class="section about-section" id="about">
+        <div class="section-label reveal">
+          <span>關於我</span>
+          <span>About</span>
+        </div>
+        <div class="about-copy reveal">
+          <p>
+            目前就讀於輔仁大學化學研究所，研究方向聚焦於計算材料科學，
+            希望透過材料模擬、人工智慧與程式設計，建立真正能協助研究工作的工具。
+          </p>
+        </div>
+      </section>
+
+      <section class="section projects-section" id="projects">
+        <div class="section-label reveal">
+          <span>精選作品</span>
+          <span>Featured Projects</span>
+        </div>
+
+        <div class="project-list">
+          <article class="project-item reveal">
+            <div class="project-panel">
+              <span class="project-number">01</span>
+              <span class="project-content">
+                <span class="project-title">Generic Slab Builder</span>
+                <span class="project-subtitle">Interactive Surface Slab Generator</span>
+                <span class="project-description">
+                  從 Bulk crystal structure 快速建立可用於 VASP 的 Slab，
+                  整合 Miller Index、Vacuum、Supercell、固定底層、Validation、
+                  Interactive 3D Viewer。
+                </span>
+                <span class="project-actions" aria-label="Generic Slab Builder actions">
+                  <a class="project-button" href="#">開啟工具 <span>Launch</span></a>
+                  <a class="project-button project-button-muted" href="#">功能介紹 <span>Overview</span></a>
+                </span>
+              </span>
+            </div>
+          </article>
+
+          <article class="project-item reveal">
+            <div class="project-panel">
+              <span class="project-number">02</span>
+              <span class="project-content">
+                <span class="project-title">AI Paper Reader</span>
+                <span class="project-subtitle">AI-assisted Research Paper Reading</span>
+                <span class="project-description">
+                  協助研究生整理 PDF、閱讀論文、建立知識庫、記錄研究筆記，
+                  提升研究效率。
+                </span>
+                <span class="project-actions" aria-label="AI Paper Reader actions">
+                  <a class="project-button" href="https://graduate-paper-reader.pages.dev/" target="_blank" rel="noopener noreferrer">開啟工具 <span>Launch</span></a>
+                  <a class="project-button project-button-muted" href="#">功能介紹 <span>Overview</span></a>
+                </span>
+              </span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="section-label reveal">
+          <span>聯絡</span>
+          <span>Contact</span>
+        </div>
+        <div class="contact-links reveal" aria-label="Contact links">
+          <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="mailto:hello@example.com">Email</a>
+          <a href="#" aria-label="LinkedIn placeholder">LinkedIn</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Sheng-Kai Lin Studio</p>
+      <p>Research, tools and reproducible workflows.</p>
+      <p>©2026</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
