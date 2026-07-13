@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Week 01 研究進度報告：AI 輔助研究工具的建立與整合。">
+    <title>Week 01｜AI 輔助研究工具的建立與整合｜My Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="research-log.css">
+  </head>
+  <body>
+    <header class="site-header report-chrome">
+      <a class="brand" href="../index.html#hero">Studio</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="../index.html#about">關於</a>
+        <a href="../index.html#projects">作品</a>
+        <a href="index.html">進度報告</a>
+        <a href="../index.html#contact">聯絡</a>
+      </nav>
+    </header>
+
+    <main class="report-page">
+      <nav class="report-links report-chrome reveal" aria-label="Report navigation">
+        <a href="index.html">← 返回報告列表</a>
+        <a href="../index.html">首頁</a>
+      </nav>
+
+      <article class="report-article">
+        <header class="report-cover report-slide reveal" tabindex="-1">
+          <p class="eyebrow">Weekly Research Progress Report</p>
+          <p class="report-week">Week 01</p>
+          <h1 class="page-hero-title">AI 輔助研究工具的建立與整合</h1>
+          <time datetime="2026-07-14">2026 / 07 / 14</time>
+          <div class="report-actions report-chrome" aria-label="Report actions">
+            <button class="project-button" type="button" data-print-report>列印 / 儲存 PDF</button>
+            <button class="project-button project-button-muted" type="button" data-presentation-toggle>簡報模式</button>
+          </div>
+        </header>
+
+        <div class="presentation-controls" data-presentation-controls aria-label="Presentation controls">
+          <button class="project-button project-button-muted" type="button" data-slide-prev>上一頁</button>
+          <span data-slide-count>1 / 5</span>
+          <button class="project-button project-button-muted" type="button" data-slide-next>下一頁</button>
+          <button class="project-button" type="button" data-slide-exit>離開簡報</button>
+        </div>
+
+        <section class="report-section report-slide reveal" id="studio" tabindex="-1">
+          <span class="section-count">02</span>
+          <h2>My Studio</h2>
+          <p class="report-subtitle">Personal Research Workspace</p>
+          <p>
+            <span class="text-segment">My Studio 是目前用來整合研究成果、開發工具與每週進度報告的個人入口網站。</span>
+            <span class="text-segment">除了集中展示 AI Paper Reader 與 Generic Slab Builder，</span>
+            <span class="text-segment">也希望逐步累積研究歷程，讓不同階段的成果可以被整理、回顧與分享。</span>
+          </p>
+          <a class="project-button report-inline-action" href="../index.html">回到 Studio 首頁 <span>→</span></a>
+        </section>
+
+        <section class="report-section report-slide reveal" id="paper-reader" tabindex="-1">
+          <span class="section-count">03</span>
+          <h2>AI Paper Reader</h2>
+          <p class="report-subtitle">AI-assisted Research Paper Reading</p>
+          <p>
+            <span class="text-segment">本週完成論文整理系統初步版本，</span>
+            <span class="text-segment">整合論文閱讀、AI整理、翻譯、筆記與知識管理，</span>
+            <span class="text-segment">希望建立更有效率的文獻閱讀流程。</span>
+          </p>
+          <a class="project-button report-inline-action" href="https://graduate-paper-reader.pages.dev/" target="_blank" rel="noopener noreferrer">前往網站 <span>→</span></a>
+        </section>
+
+        <section class="report-section report-slide reveal" id="slab-builder" tabindex="-1">
+          <span class="section-count">04</span>
+          <h2>Generic Slab Builder</h2>
+          <p class="report-subtitle">Interactive Surface Slab Generator</p>
+          <p>
+            <span class="text-segment">本週完成 Slab Builder 第一版，</span>
+            <span class="text-segment">目前已能建立常見表面模型，</span>
+            <span class="text-segment">並整合互動式 3D Viewer 與 VASP 輸入檔產生流程。</span>
+          </p>
+        </section>
+
+        <section class="report-section report-slide reveal" id="future-development" tabindex="-1">
+          <span class="section-count">05</span>
+          <h2>Future Development</h2>
+          <ol class="future-list">
+            <li>
+              <strong>完善 Generic Slab Builder</strong>
+              <span class="text-segment">更多表面支援、Adsorption Site、Validation、公開部署。</span>
+            </li>
+            <li>
+              <strong>持續優化 My Studio</strong>
+              <span class="text-segment">作為研究成果展示平台，加入更多研究紀錄與作品。</span>
+            </li>
+            <li>
+              <strong>持續學習 VASP</strong>
+              <span class="text-segment">深入了解 INCAR、KPOINTS、結構最佳化、吸附模型與 DFT 理論。</span>
+            </li>
+          </ol>
+        </section>
+      </article>
+    </main>
+
+    <script src="../app.js"></script>
+    <script src="research-log.js"></script>
+  </body>
+</html>

@@ -16,6 +16,7 @@
       <nav class="nav" aria-label="Primary navigation">
         <a href="#about">關於</a>
         <a href="#projects">作品</a>
+        <a href="research-log/index.html">進度報告</a>
         <a href="#contact">聯絡</a>
       </nav>
     </header>
@@ -26,9 +27,6 @@
           <p class="eyebrow reveal">SHENG-KAI LIN · RESEARCH STUDIO</p>
           <h1 class="hero-title reveal">My Studio</h1>
           <p class="hero-subtitle reveal">Research Studio for Computational Materials</p>
-          <p class="hero-copy reveal">
-            將材料模擬、人工智慧與程式設計，轉化為可重現的研究工具。
-          </p>
           <a class="primary-link reveal" href="#projects">
             探索作品
             <span aria-hidden="true">→</span>
@@ -38,23 +36,25 @@
       </section>
 
       <section class="section about-section" id="about">
-        <div class="section-label reveal">
-          <span>關於我</span>
-          <span>About</span>
-        </div>
+        <header class="section-heading reveal">
+          <h2 class="section-heading-title">關於我</h2>
+          <p class="section-heading-subtitle">About</p>
+        </header>
         <div class="about-copy reveal">
           <p>
-            目前就讀於輔仁大學化學研究所，研究方向聚焦於計算材料科學，
-            希望透過材料模擬、人工智慧與程式設計，建立真正能協助研究工作的工具。
+            <span class="text-segment">目前就讀於輔仁大學化學研究所，</span>
+            <span class="text-segment">研究方向聚焦於計算材料科學。</span>
+            <span class="text-segment">希望透過材料模擬、人工智慧與程式設計，</span>
+            <span class="text-segment">建立真正能協助研究工作的工具。</span>
           </p>
         </div>
       </section>
 
       <section class="section projects-section" id="projects">
-        <div class="section-label reveal">
-          <span>精選作品</span>
-          <span>Featured Projects</span>
-        </div>
+        <header class="section-heading reveal">
+          <h2 class="section-heading-title">精選作品</h2>
+          <p class="section-heading-subtitle">Featured Projects</p>
+        </header>
 
         <div class="project-list">
           <article class="project-item reveal">
@@ -64,13 +64,13 @@
                 <span class="project-title">Generic Slab Builder</span>
                 <span class="project-subtitle">Interactive Surface Slab Generator</span>
                 <span class="project-description">
-                  從 Bulk crystal structure 快速建立可用於 VASP 的 Slab，
-                  整合 Miller Index、Vacuum、Supercell、固定底層、Validation、
-                  Interactive 3D Viewer。
+                  <span class="text-segment">從 Bulk crystal structure 快速建立可用於 VASP 的 Slab，</span>
+                  <span class="text-segment">整合 Miller Index、Vacuum、Supercell、固定底層、Validation、</span>
+                  <span class="text-segment">Interactive 3D Viewer。</span>
                 </span>
                 <span class="project-actions" aria-label="Generic Slab Builder actions">
-                  <a class="project-button" href="#">開啟工具 <span>Launch</span></a>
-                  <a class="project-button project-button-muted" href="#">功能介紹 <span>Overview</span></a>
+                  <span class="project-button is-disabled" aria-disabled="true">開發中 <span>Development Preview</span></span>
+                  <a class="project-button project-button-muted" href="projects/slab-builder.html">功能介紹 <span>Overview</span></a>
                 </span>
               </span>
             </div>
@@ -83,12 +83,13 @@
                 <span class="project-title">AI Paper Reader</span>
                 <span class="project-subtitle">AI-assisted Research Paper Reading</span>
                 <span class="project-description">
-                  協助研究生整理 PDF、閱讀論文、建立知識庫、記錄研究筆記，
-                  提升研究效率。
+                  <span class="text-segment">協助研究生整理 PDF、閱讀論文、</span>
+                  <span class="text-segment">建立知識庫、記錄研究筆記，</span>
+                  <span class="text-segment">提升研究效率。</span>
                 </span>
                 <span class="project-actions" aria-label="AI Paper Reader actions">
                   <a class="project-button" href="https://graduate-paper-reader.pages.dev/" target="_blank" rel="noopener noreferrer">開啟工具 <span>Launch</span></a>
-                  <a class="project-button project-button-muted" href="#">功能介紹 <span>Overview</span></a>
+                  <a class="project-button project-button-muted" href="projects/ai-paper-reader.html">功能介紹 <span>Overview</span></a>
                 </span>
               </span>
             </div>
@@ -96,11 +97,25 @@
         </div>
       </section>
 
-      <section class="section contact-section" id="contact">
-        <div class="section-label reveal">
-          <span>聯絡</span>
-          <span>Contact</span>
+      <section class="section research-log-entry" id="research-log">
+        <header class="section-heading reveal">
+          <h2 class="section-heading-title">每週進度報告</h2>
+          <p class="section-heading-subtitle">Research Log</p>
+        </header>
+        <div class="log-entry-copy reveal">
+          <p>記錄研究進度、工具開發、問題排查與下一步規劃。</p>
+          <a class="primary-link" href="research-log/index.html">
+            查看所有報告
+            <span aria-hidden="true">→</span>
+          </a>
         </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <header class="section-heading reveal">
+          <h2 class="section-heading-title">聯絡</h2>
+          <p class="section-heading-subtitle">Contact</p>
+        </header>
         <div class="contact-links reveal" aria-label="Contact links">
           <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
           <a href="mailto:hello@example.com">Email</a>

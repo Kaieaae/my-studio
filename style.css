@@ -27,7 +27,11 @@ body {
   font-size: 16px;
   line-height: 1.8;
   letter-spacing: 0;
+  line-break: strict;
+  overflow-wrap: break-word;
   overflow-x: hidden;
+  word-break: normal;
+  word-spacing: normal;
 }
 
 body::selection {
@@ -37,6 +41,10 @@ body::selection {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.text-segment {
+  display: inline-block;
 }
 
 .site-header {
@@ -133,6 +141,16 @@ a {
   letter-spacing: 0;
 }
 
+.page-hero-title {
+  max-width: 980px;
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0;
+}
+
 .hero-subtitle {
   max-width: 620px;
   margin: 10px 0 0;
@@ -182,44 +200,48 @@ a {
 
 .section {
   display: grid;
-  grid-template-columns: minmax(180px, 0.32fr) 1fr;
+  grid-template-columns: minmax(220px, 0.8fr) minmax(0, 2.2fr);
   gap: clamp(36px, 8vw, 120px);
   padding: clamp(96px, 14vw, 180px) 0;
   border-top: 1px solid var(--line);
 }
 
-.section-label {
-  display: grid;
+.section-heading {
+  display: flex;
+  flex-direction: column;
   align-content: start;
-  gap: 6px;
+  align-items: flex-start;
+  gap: 0;
   color: var(--muted);
-  font-size: 0.9rem;
+  margin: 0;
 }
 
-.section-label span:first-child {
+.section-heading-title {
+  margin: 0;
   color: var(--ink);
   font-family: "Noto Sans TC", "Inter", system-ui, sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: clamp(1.75rem, 2.2vw, 2.2rem);
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  word-break: keep-all;
+}
+
+.section-heading-subtitle {
+  margin: 0.65rem 0 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
 }
 
 .about-section,
-.projects-section {
-  row-gap: clamp(48px, 6vw, 64px);
-}
-
-.about-section .section-label,
-.projects-section .section-label {
-  gap: 14px;
-  margin-bottom: clamp(48px, 6vw, 64px);
-  font-size: clamp(1.2rem, 1.7vw, 1.35rem);
-}
-
-.about-section .section-label span:first-child,
-.projects-section .section-label span:first-child {
-  font-size: clamp(2.2rem, 3.4vw, 2.5rem);
-  font-weight: 600;
-  line-height: 1.15;
+.projects-section,
+.research-log-entry,
+.contact-section {
+  row-gap: clamp(44px, 6vw, 64px);
+  padding: clamp(88px, 12vw, 150px) 0;
 }
 
 .about-copy p {
@@ -231,12 +253,23 @@ a {
   line-height: 1.8;
 }
 
-.about-section {
-  padding: clamp(72px, 9vw, 124px) 0;
-}
-
 .projects-section {
   align-items: start;
+}
+
+.log-entry-copy {
+  display: grid;
+  gap: 26px;
+  align-content: start;
+}
+
+.log-entry-copy p {
+  max-width: 720px;
+  margin: 0;
+  color: var(--muted);
+  font-family: "Noto Sans TC", "Inter", system-ui, sans-serif;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  line-height: 1.8;
 }
 
 .project-list {
@@ -250,7 +283,7 @@ a {
 
 .project-panel {
   display: grid;
-  grid-template-columns: 110px 1fr;
+  grid-template-columns: minmax(120px, 180px) minmax(0, 1fr);
   gap: clamp(26px, 5vw, 72px);
   padding: clamp(34px, 6vw, 68px) 0;
   transition: transform 260ms var(--ease), color 260ms var(--ease);
@@ -263,8 +296,12 @@ a {
 .project-number {
   color: var(--brass);
   font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-variant-numeric: tabular-nums;
   font-weight: 500;
   line-height: 1;
+  min-width: 120px;
+  white-space: nowrap;
+  word-break: keep-all;
 }
 
 .project-content {
@@ -311,6 +348,7 @@ a {
   font-size: 0.9rem;
   font-weight: 600;
   line-height: 1;
+  white-space: nowrap;
   transition: transform 220ms var(--ease), background 220ms var(--ease), color 220ms var(--ease), border-color 220ms var(--ease);
 }
 
@@ -336,6 +374,25 @@ a {
 
 .project-button-muted {
   border-color: rgba(155, 123, 82, 0.36);
+}
+
+.project-button.is-disabled {
+  cursor: default;
+  opacity: 0.62;
+  pointer-events: none;
+}
+
+.project-button.is-disabled:hover,
+.project-button.is-disabled:focus-visible {
+  border-color: rgba(51, 65, 85, 0.28);
+  background: rgba(247, 246, 242, 0.58);
+  color: var(--ink);
+  transform: none;
+}
+
+.project-button.is-disabled:hover span,
+.project-button.is-disabled:focus-visible span {
+  color: var(--muted);
 }
 
 .contact-links {
@@ -388,10 +445,6 @@ a {
 
 .detail-title {
   max-width: 940px;
-  margin: 0;
-  font-size: clamp(3.5rem, 9vw, 8.5rem);
-  font-weight: 500;
-  line-height: 0.98;
 }
 
 .detail-subtitle {
@@ -500,10 +553,23 @@ a {
     font-size: clamp(3.2rem, 16vw, 5.2rem);
   }
 
+  .page-hero-title {
+    font-size: clamp(2.4rem, 12vw, 3.8rem);
+  }
+
   .section {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: clamp(1.75rem, 7vw, 2.25rem);
     padding: 88px 0;
+  }
+
+  .section-heading-title {
+    font-size: clamp(1.7rem, 7vw, 2rem);
+  }
+
+  .section-heading-subtitle {
+    margin-top: 0.45rem;
+    font-size: 1rem;
   }
 
   .about-copy p {
@@ -527,6 +593,7 @@ a {
 
   .project-number {
     font-size: 3.2rem;
+    min-width: 0;
   }
 
   .contact-links {
