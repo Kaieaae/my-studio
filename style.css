@@ -21,7 +21,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--paper);
+  background: linear-gradient(180deg, #faf8f3 0%, #f7f4ee 45%, #f4f1ea 100%);
   color: var(--ink);
   font-family: "Inter", "Noto Sans TC", system-ui, sans-serif;
   font-size: 16px;
@@ -102,10 +102,25 @@ a {
 
 .hero {
   position: relative;
+  isolation: isolate;
   display: grid;
   min-height: 100vh;
   padding: 140px 24px 88px;
   place-items: center;
+}
+
+.hero::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at 32% 38%,
+    rgba(165, 132, 83, 0.11) 0%,
+    rgba(165, 132, 83, 0.055) 24%,
+    transparent 58%
+  );
+  content: "";
 }
 
 .hero-inner,
@@ -538,6 +553,15 @@ a {
   .hero {
     align-items: end;
     padding: 116px 20px 96px;
+  }
+
+  .hero::before {
+    background: radial-gradient(
+      circle at 34% 38%,
+      rgba(165, 132, 83, 0.07) 0%,
+      rgba(165, 132, 83, 0.034) 22%,
+      transparent 52%
+    );
   }
 
   .hero-inner,
