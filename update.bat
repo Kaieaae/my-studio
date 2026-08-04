@@ -60,7 +60,7 @@ if errorlevel 1 goto error
 echo.
 echo 正在推送到 GitHub...
 git push origin main
-if errorlevel 1 goto error
+if errorlevel 1 goto push_error
 
 echo.
 echo 最新版本：
@@ -82,6 +82,22 @@ echo ========================================
 echo 更新失敗
 echo 請查看上方 Git 錯誤訊息
 echo ========================================
+echo.
+pause
+exit /b 1
+
+:push_error
+echo.
+echo ========================================
+echo 推送失敗
+echo GitHub 沒有收到這次更新
+echo 請先確認 GitHub 已登入
+echo ========================================
+echo.
+echo 常見處理方式：
+echo 1. 開啟 Git Bash 或 PowerShell
+echo 2. 執行 git push origin main
+echo 3. 依照畫面登入 GitHub
 echo.
 pause
 exit /b 1
