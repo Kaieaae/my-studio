@@ -63,6 +63,10 @@ git push origin main
 if errorlevel 1 goto error
 
 echo.
+echo 最新版本：
+git log -1 --oneline
+
+echo.
 echo ========================================
 echo 更新成功
 echo GitHub 已更新
