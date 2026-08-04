@@ -1,6 +1,6 @@
 @echo off
 chcp 65001 >nul
-setlocal
+setlocal EnableDelayedExpansion
 cd /d "%~dp0"
 
 echo ========================================
@@ -37,6 +37,14 @@ git status --porcelain > "%STATUS_FILE%"
 for %%A in ("%STATUS_FILE%") do if %%~zA==0 (
     del "%STATUS_FILE%" >nul 2>&1
     echo.
+    echo 目前沒有新的檔案修改。
+    call :check_ahead
+    if not "!AHEAD_COUNT!"=="0" (
+        echo.
+        echo 但目前有 !AHEAD_COUNT! 個版本尚未推送到 GitHub。
+        goto push
+    )
+    echo.
     echo 目前沒有需要更新的內容。
     echo.
     pause
@@ -59,6 +67,8 @@ if errorlevel 1 goto error
 
 echo.
 echo 正在推送到 GitHub...
+:push
+git config http.sslbackend openssl >nul 2>&1
 git push origin main
 if errorlevel 1 goto push_error
 
@@ -85,6 +95,13 @@ echo ========================================
 echo.
 pause
 exit /b 1
+
+:check_ahead
+set "AHEAD_COUNT=0"
+git rev-parse --abbrev-ref --symbolic-full-name @{u} >nul 2>&1
+if errorlevel 1 exit /b 0
+for /f "usebackq delims=" %%B in (`git rev-list --count @{u}..HEAD 2^>nul`) do set "AHEAD_COUNT=%%B"
+exit /b 0
 
 :push_error
 echo.
