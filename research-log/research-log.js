@@ -1,4 +1,3 @@
-const printButton = document.querySelector("[data-print-report]");
 const presentationButton = document.querySelector("[data-presentation-toggle]");
 const slides = Array.from(document.querySelectorAll(".report-slide"));
 const slideCount = document.querySelector("[data-slide-count]");
@@ -6,10 +5,6 @@ const previousButton = document.querySelector("[data-slide-prev]");
 const nextButton = document.querySelector("[data-slide-next]");
 const exitButton = document.querySelector("[data-slide-exit]");
 let currentSlide = 0;
-
-if (printButton) {
-  printButton.addEventListener("click", () => window.print());
-}
 
 function updateControls() {
   if (!slides.length) return;
