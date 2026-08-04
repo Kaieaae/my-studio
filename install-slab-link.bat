@@ -6,12 +6,12 @@ cd /d "%~dp0"
 set "LOCAL_LAUNCHER=%~dp0open-slab-builder.bat"
 
 echo ========================================
-echo Slab Builder 網站按鈕啟動設定
+echo Slab Builder link setup
 echo ========================================
 echo.
 
 if not exist "%LOCAL_LAUNCHER%" (
-    echo 找不到本機啟動器：
+    echo Local launcher was not found:
     echo %LOCAL_LAUNCHER%
     echo.
     pause
@@ -30,20 +30,19 @@ if errorlevel 1 goto error
 reg add "HKCU\Software\Classes\slabbuilder\shell\open" /ve /d "open" /f >nul
 if errorlevel 1 goto error
 
-reg add "HKCU\Software\Classes\slabbuilder\shell\open\command" /ve /d "\"%LOCAL_LAUNCHER%\" \"%%1\"" /f >nul
+reg add "HKCU\Software\Classes\slabbuilder\shell\open\command" /ve /d "^"%LOCAL_LAUNCHER%^" ^"%%1^"" /f >nul
 if errorlevel 1 goto error
 
 echo.
-echo 設定完成。
-echo 之後在 My Studio 點「開啟工具」時，
-echo 瀏覽器若詢問是否開啟 Slab Builder Launcher，請選擇允許。
+echo Setup completed.
+echo When the browser asks to open Slab Builder Launcher, choose Allow.
 echo.
 pause
 exit /b 0
 
 :error
 echo.
-echo 設定失敗，請確認 Windows 是否允許寫入目前使用者的登錄設定。
+echo Setup failed. Please check whether Windows allows user registry changes.
 echo.
 pause
 exit /b 1
