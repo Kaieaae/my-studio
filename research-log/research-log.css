@@ -175,6 +175,7 @@
   font-weight: 600;
 }
 
+.report-section h1,
 .report-section h2 {
   margin: 0;
   font-size: clamp(2rem, 4vw, 3.8rem);
@@ -300,6 +301,7 @@ body.presentation-mode .report-slide.is-current-slide {
   animation: slideFade 260ms var(--ease) both;
 }
 
+body.presentation-mode .report-section h1,
 body.presentation-mode .report-section h2 {
   font-size: clamp(2.8rem, 5.8vw, 5.6rem);
 }
@@ -439,6 +441,7 @@ body.presentation-mode .presentation-controls {
     page-break-before: auto;
   }
 
+  .report-section h1,
   .report-section h2,
   .report-cover h1 {
     color: #111;

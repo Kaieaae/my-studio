@@ -290,3 +290,17 @@ AI Decision Making 定義 Codex 在面對多種可行方案時的決策優先順
 本章預留未來新增功能時需要遵守的原則。  
 新增功能應延續 My Studio 作為研究工作入口與整合平台的定位。  
 任何擴充都應考慮長期維護、資訊架構一致性與日常使用負擔。
+
+## Agent skills
+
+### Issue tracker
+
+Issues and PRDs are tracked in this repository's GitHub Issues. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Triage uses the five default canonical label names. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Domain documentation uses a single-context layout. See `docs/agents/domain.md`.
