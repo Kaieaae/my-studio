@@ -11,9 +11,24 @@
   color: var(--muted);
 }
 
-.progress-history {
-  padding: 32px 0 80px;
-  border-top: 1px solid var(--line);
+.progress-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  padding-bottom: 28px;
+}
+
+.progress-categories a {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.progress-page {
+  padding-bottom: 80px;
+}
+
+.progress-subprojects {
+  min-width: 0;
 }
 
 .progress-skip-link {

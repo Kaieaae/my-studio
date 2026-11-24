@@ -19,6 +19,7 @@
       <nav class="nav" aria-label="主要導覽">
         <a href="../index.html#about">關於</a>
         <a href="../index.html#projects">作品</a>
+        <a href="index.html" aria-current="page">研究進度總覽</a>
         <a href="../research-log/index.html">進度報告</a>
         <a href="../index.html#contact">聯絡</a>
       </nav>
@@ -35,33 +36,42 @@
         <p class="log-subtitle">尚未發布研究進度。</p>
       </header>
 
-      <section class="progress-section" aria-labelledby="summary-title">
-        <header class="section-heading">
-          <h2 class="section-heading-title" id="summary-title">本週摘要</h2>
-          <p class="section-heading-subtitle">Weekly Summary</p>
-        </header>
-        <p class="progress-empty">尚未填寫。</p>
-      </section>
-
-      <section class="progress-section" aria-labelledby="projects-title">
-        <header class="section-heading">
-          <h2 class="section-heading-title" id="projects-title">專案進度</h2>
-          <p class="section-heading-subtitle">Project Status</p>
-        </header>
-        <p class="progress-empty">尚未新增專案進度。</p>
-      </section>
-
-      <section class="progress-section" aria-labelledby="next-title">
-        <header class="section-heading">
-          <h2 class="section-heading-title" id="next-title">下一步</h2>
-          <p class="section-heading-subtitle">Next Steps</p>
-        </header>
-        <p class="progress-empty">尚未填寫。</p>
-      </section>
-
-      <nav class="progress-history" aria-label="歷史研究紀錄">
-        <a class="primary-link" href="../research-log/index.html">查看每週進度報告 <span aria-hidden="true">→</span></a>
+      <nav class="progress-categories" aria-label="研究項目">
+        <a href="#thesis">碩士論文</a>
+        <a href="#collaborations">合作案</a>
+        <a href="#weekly-reports">進度報告</a>
       </nav>
+
+      <section class="progress-section" id="thesis" aria-labelledby="thesis-title">
+        <header class="section-heading">
+          <h2 class="section-heading-title" id="thesis-title">碩士論文</h2>
+          <p class="section-heading-subtitle">Master’s Thesis</p>
+        </header>
+        <div class="progress-subprojects">
+          <p class="progress-empty">尚未新增小項目與進度紀錄。</p>
+        </div>
+      </section>
+
+      <section class="progress-section" id="collaborations" aria-labelledby="collaborations-title">
+        <header class="section-heading">
+          <h2 class="section-heading-title" id="collaborations-title">合作案</h2>
+          <p class="section-heading-subtitle">Collaborations</p>
+        </header>
+        <div class="progress-subprojects">
+          <p class="progress-empty">尚未新增小項目與進度紀錄。</p>
+        </div>
+      </section>
+
+      <section class="progress-section" id="weekly-reports" aria-labelledby="reports-title">
+        <header class="section-heading">
+          <h2 class="section-heading-title" id="reports-title">進度報告</h2>
+          <p class="section-heading-subtitle">Weekly Reports</p>
+        </header>
+        <div class="log-entry-copy">
+          <p>歷次每週研究進度報告。</p>
+          <a class="primary-link" href="../research-log/index.html">查看每週進度報告 <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">

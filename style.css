@@ -559,6 +559,7 @@ a {
 
   .nav {
     gap: 12px;
+    flex-wrap: wrap;
     font-size: 0.78rem;
   }
 
@@ -674,6 +675,8 @@ a {
   .nav {
     width: 100%;
     justify-content: space-between;
+    column-gap: 14px;
+    row-gap: 0;
   }
 
   .nav a {
