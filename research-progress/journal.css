@@ -1,0 +1,43 @@
+.journal-page { width: min(100% - 48px, 1100px); margin: 0 auto; padding-bottom: 80px; }
+.journal-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 40px 0; font-size: .9rem; }
+.journal-toolbar form { margin: 0; }
+.journal-text-button { border: 0; border-bottom: 1px solid var(--line); padding: 8px 0; background: none; color: var(--ink); font: inherit; cursor: pointer; }
+.journal-heading { padding: 48px 0; }
+.journal-heading h1 { margin: 12px 0 20px; font-size: 3rem; line-height: 1.2; font-weight: 500; }
+.journal-heading p { max-width: 800px; }
+.journal-login { display: grid; gap: 12px; max-width: 440px; padding-bottom: 80px; }
+.journal-login input { width: 100%; min-height: 48px; border: 1px solid var(--muted); border-radius: 4px; background: var(--paper); padding: 10px 12px; color: var(--ink); font: inherit; }
+.journal-login p { margin: 0; min-height: 1.8em; }
+.journal-login button { justify-self: start; }
+.journal-topics { display: flex; flex-wrap: wrap; gap: 12px 24px; padding: 20px 0 32px; }
+.journal-topics a { border-bottom: 1px solid var(--line); padding: 8px 0; }
+.journal-topic { padding: 40px 0; border-top: 1px solid var(--line); }
+.journal-topic h2 { margin: 0 0 16px; font-size: 1.8rem; font-weight: 600; line-height: 1.4; }
+.journal-topic h3 { margin: 32px 0 16px; font-size: 1.2rem; line-height: 1.5; }
+.journal-topic p, .journal-topic li { max-width: 900px; overflow-wrap: anywhere; }
+.journal-topic li { margin-bottom: 10px; }
+.journal-topic details { margin-top: 24px; }
+.journal-topic summary { cursor: pointer; padding: 12px 0; font-weight: 500; }
+.journal-topic code { overflow-wrap: anywhere; font-size: .9em; }
+.journal-table { max-width: 100%; overflow-x: auto; margin: 24px 0; }
+.journal-table table { width: 100%; border-collapse: collapse; font-size: .94rem; }
+.journal-table th, .journal-table td { text-align: left; vertical-align: top; padding: 14px 16px; border-bottom: 1px solid var(--line); min-width: 120px; }
+.journal-table th { color: var(--slate); font-weight: 600; }
+.journal-period { color: var(--muted); font-size: .95rem; }
+.journal-skip { position: absolute; top: 8px; left: 16px; z-index: 30; padding: 12px; background: var(--paper); transform: translateY(-150%); }
+.journal-skip:focus { transform: none; }
+.journal-page :focus-visible, .journal-skip:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+@media (max-width: 760px) {
+  .journal-page { width: calc(100% - 32px); }
+  .journal-heading { padding: 28px 0; }
+  .journal-heading h1 { font-size: 2.2rem; }
+  .journal-topic h2 { font-size: 1.5rem; }
+  .journal-topic { padding: 28px 0; }
+  .journal-table th, .journal-table td { padding: 10px; }
+}
+@media print {
+  .site-header, .journal-toolbar, .journal-topics, .footer { display: none; }
+  .journal-page { width: 100%; }
+  .journal-table { overflow: visible; }
+  .journal-table th, .journal-table td { min-width: 0; }
+}

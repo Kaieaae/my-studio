@@ -31,6 +31,17 @@
   min-width: 0;
 }
 
+.progress-project {
+  display: grid;
+  gap: 18px;
+}
+
+.progress-project h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
 .progress-skip-link {
   position: absolute;
   top: 8px;

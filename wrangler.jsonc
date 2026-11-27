@@ -1,13 +1,13 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "my-worker",
-  "compatibility_date": "2026-07-13",
-  "observability": {
-    "enabled": true
-  },
-  "assets": {
-    "directory": "."
-  },
+  "name": "my-studio",
+  "pages_build_output_dir": "./dist",
+  "compatibility_date": "2026-11-27",
+  "d1_databases": [{
+    "binding": "JOURNAL_DB",
+    "database_name": "my-studio-journal",
+    "database_id": "b5e94ecc-8408-4589-bd05-70fdf0d9e87e"
+  }],
   "compatibility_flags": [
     "nodejs_compat"
   ]
